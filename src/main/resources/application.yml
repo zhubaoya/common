@@ -1,0 +1,12 @@
+# 端口号配置
+server:
+  port: 8100
+
+#  日志配置
+logging:
+  file:
+    path: ./commonLog
+  config: classpath:logback-spring.xml
+
+
+
