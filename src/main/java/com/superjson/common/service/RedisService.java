@@ -125,5 +125,4 @@ public class RedisService {
     public void persistKey(String key) {
         redisTemplate.persist(key);
     }
-
 }
