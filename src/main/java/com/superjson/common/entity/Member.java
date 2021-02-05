@@ -15,14 +15,15 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 public class Member implements Serializable {
-
-    public static final String Table = "t_user";
-
     private static final long serialVersionUID = -975769462920892707L;
 
+    private String id;
+
     private String name;
+
     private String address;
-    private Integer age;
-    private String token;
-    private Long id;
+
+    private int age;
+
+
 }

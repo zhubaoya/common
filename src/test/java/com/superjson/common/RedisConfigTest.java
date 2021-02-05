@@ -36,6 +36,7 @@ public class RedisConfigTest {
 
     @Resource
     private RedisService redisService;
+    public static final String Table = "t_user";
 
     @Test
     public void testObj() throws Exception{
@@ -44,7 +45,7 @@ public class RedisConfigTest {
         userVo.setName("测试dfas");
         userVo.setAge(123);
         ValueOperations<String,Object> operations = redisTemplate.opsForValue();
-        String key =getKey(Member.Table,"name",userVo.getName());
+        String key =getKey(Table,"name",userVo.getName());
         redisService.expireKey(key,20, TimeUnit.SECONDS);
         Member vo = (Member) operations.get(key);
         System.out.println(vo);
