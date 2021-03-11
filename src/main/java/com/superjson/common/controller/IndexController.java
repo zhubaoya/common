@@ -21,6 +21,6 @@ public class IndexController {
     @ApiOperation(value = "向客人问好")
     @GetMapping("/sayHi")
     public ResponseEntity<String> sayHi(@RequestParam(value = "name")String name){
-        return ResponseEntity.ok("Hi:"+name);
+        return ResponseEntity.ok("Hi:"+name+"welcome to this ，这是一个测试接口，哈哈哈哈  ");
     }
 }
